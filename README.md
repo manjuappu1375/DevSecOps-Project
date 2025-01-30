@@ -12,7 +12,7 @@
 - Update all packages and clone the repository:
   ```bash
   sudo apt-get update
-  git clone https://github.com/Sushmaa123/DevSecOps-Project.git
+  git clone https://github.com/manjuappu1375/DevSecOps-Project.git
   ```
 
 ### Step 3: Install Docker and Run the App Using a Container
