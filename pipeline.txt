@@ -4,9 +4,9 @@ pipeline{
         nodejs 'node16'
     }
     environment {
-        SCANNER_HOME=tool 'sonar-scanner'
-        IMAGE_NAME = "sushmaagowdaa/netflix" // Name of the image created in Jenkins
-        CONTAINER_NAME = "netflix" // Name of the container created in Jenkins
+        SCANNER_HOME=tool 'sonarqube'
+        IMAGE_NAME = "manjuappu1375/devsecops" // Name of the image created in Jenkins
+        CONTAINER_NAME = "devsecops" // Name of the container created in Jenkins
     }
     stages {
         stage('clean workspace'){
@@ -16,12 +16,12 @@ pipeline{
         }
         stage('Checkout from Git'){
             steps{
-                git 'https://github.com/Sushmaa123/DevSecOps-Project.git'
+                git 'https://github.com/manjuappu1375/DevSecOps-Project.git'
             }
         }
         stage("Sonarqube Analysis "){
             steps{
-                withSonarQubeEnv('sonar-server') {
+                withSonarQubeEnv('sonar_server') {
                     sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=DevSecOps-Project \
                     -Dsonar.projectKey=DevSecOps-Project'''
                 }
