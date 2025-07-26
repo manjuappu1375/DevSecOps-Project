@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
 resource "aws_eks_cluster" "netflix" {
   name     = "netflix-eks-cluster"
   role_arn = aws_iam_role.eks_cluster_role.arn
