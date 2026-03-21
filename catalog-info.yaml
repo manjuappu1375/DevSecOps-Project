@@ -3,8 +3,12 @@ kind: Component
 metadata:
   name: devsecops-project
   description: DevSecOps pipeline project
+
   annotations:
     github.com/project-slug: manjuappu1375/DevSecOps-Project
+
+    backstage.io/kubernetes-label-selector: app=devsecops-project
+
 spec:
   type: service
   lifecycle: production
