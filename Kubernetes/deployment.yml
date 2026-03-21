@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: netflix-app
+  name: DevSecOps-Project
   labels:
-    app: netflix-app
+    app: DevSecOps-Project
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: netflix-app
+      app: DevSecOps-Project
   template:
     metadata:
       labels:
-        app: netflix-app
+        app: DevSecOps-Project
     spec:
       containers:
-      - name: netflix-app
-        image: nasi101/netflix:latest
+      - name: DevSecOps-Project
+        image: nasi101/DevSecOps-Project:latest
         ports:
         - containerPort: 80
