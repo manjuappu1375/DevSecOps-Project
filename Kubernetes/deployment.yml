@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: DevSecOps-Project
+  name: devsecops-project
   labels:
-    app: DevSecOps-Project
+    app: devsecops-project
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: DevSecOps-Project
+      app: devsecops-project
   template:
     metadata:
       labels:
-        app: DevSecOps-Project
+        app: devsecops-project
     spec:
       containers:
-      - name: DevSecOps-Project
-        image: nasi101/DevSecOps-Project:latest
+      - name: devsecops-project
+        image: nasi101/devsecops-project:latest
         ports:
         - containerPort: 80
