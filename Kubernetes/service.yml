@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: DevSecOps-Project
+  name: devsecops-project
   labels:
-    app: DevSecOps-Project
+    app: devsecops-project
 spec:
   type: NodePort
   ports:
@@ -11,4 +11,4 @@ spec:
     targetPort: 80
     nodePort: 30007
   selector:
-    app: DevSecOps-Project
+    app: devsecops-project
